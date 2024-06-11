@@ -1,5 +1,5 @@
 package org.moyoman.crypto.cipher;
 
-public @interface CipherAlgorithm {
+public @interface Cipher {
 
 }

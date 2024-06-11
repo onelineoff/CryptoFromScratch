@@ -78,10 +78,11 @@ There are many variations of this.  One example is to pick a code word, such as 
 a rectangular group of letters.  The second line is the position of the letter above in the alphabet.  Finally, the plaintext is written in rows of the same length as the code word.  
 
 For example, if the message is one if by land, two if by sea, it would be written like this:
-`a   l   g   o   r   i   t   h   m   s
-1   12  7   15  18  9   20  8   13  19
-o   n   e   i   b   l   ,   t   w   o
-i   f   b   y   s   e   a   x   x   x` 
+`a   l   g   o   r   i   t   h   m   s`
+`1   12  7   15  18  9   20  8   13  19`
+`o   n   e   i   f   b   y   l   a   n`
+`d   ,   t   w   o   i   f   b   y   s `  
+`e   a   x   x   x   x   x   x   x   x`
 
 If there are blank spaces, just fill them in with an x, or some other character.
 

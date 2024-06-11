@@ -20,6 +20,7 @@
       <spring.boot.version>3.3.0</spring.boot.version>
       <springframework.version>6.1.8</springframework.version>
       <springdoc.openapi.version>1.8.0</springdoc.openapi.version>
+      <junit.version>5.10.2</junit.version>
    </properties>
 
    <parent>
@@ -117,14 +118,9 @@
          <scope>test</scope>
       </dependency>
       <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <version>4.13.2</version>
-          <scope>test</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-api</artifactId>
+          <version>${junit.version}</version>
           <scope>test</scope>
       </dependency>
    </dependencies>
