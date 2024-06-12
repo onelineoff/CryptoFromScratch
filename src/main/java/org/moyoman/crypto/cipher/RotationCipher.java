@@ -1,37 +1,46 @@
 package org.moyoman.crypto.cipher;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Cipher
 @Service
-/** Very simplistic encryption by rotating the letters based on a key of 0 - 25.
+/** Very simplistic encryption by rotating the letters based on a key of 1 - 25.
  * With a key of 3 a -> d, b-> e, ..., x -> a, y -> b, z -> c.
  *  <A href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</A>
  */
 public class RotationCipher {
-
-	private static char[] LOWER_ARRAY = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
-			'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-	private static char[] UPPER_ARRAY = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-			'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S','T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(RotationCipher.class);
+	
+	/** Convert the input to the encrypted value by rotating to the right.
+	 * 
+	 * @param input The plaintext input
+	 * @param key The amount to rotate to the right
+	 * @return The encrypted string.
+	 */
 	public String rotate(String input, int key) {
-		// TODO rewrite using FP
-
-		char[] charArr = input.toCharArray();
-		for (int i=0; i<charArr.length; i++) {
-			char currChar = charArr[i];
-			if (Character.isLowerCase(currChar)) {
-				int offset = (currChar - 'a' + key) % 26;
-				charArr[i] = LOWER_ARRAY[offset];
-			}
-			else if (Character.isUpperCase(currChar)) {
-				int offset = (currChar - 'A' + key) % 26;
-				charArr[i] = UPPER_ARRAY[offset];
-			}
-			// Non alphabetic characters would remain unchanged.
+		if (key <= 0) {
+			String msg = String.format("In rotation cipher, key needs to be in the range 1 - 25, got %d", key);
+			LOGGER.warn(msg);
+			throw new IllegalArgumentException(msg);
 		}
 		
+		char[] charArr = input.toCharArray();
+		for (int i=0; i<charArr.length; i++) {
+			if (Character.isLetter(charArr[i])) {
+				char firstChar = 'a';
+				if (Character.isUpperCase(charArr[i])) {
+					firstChar = 'A';
+				}
+
+				int offset = (charArr[i] - firstChar + key) % 26;
+				charArr[i] = (char) (firstChar + offset);
+			}
+		}
+
+		// Non alphabetic characters would remain unchanged.
+
 		return new String(charArr);
 	}
 }
