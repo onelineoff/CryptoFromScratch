@@ -74,14 +74,18 @@ Using the above information, the number of possibilities becomes much smaller, a
 This can be further refined by breaking up the brute force search into two steps, taking advantage of the fact that the brute force search is proportional to n factorial, where n is the number of unknown letters, and if a + b = c, then a! + b! is much, much less than c!.
 
 ### Transposition Cipher
-There are many variations of this.  One example is to pick a code word, such as algorithms, which consists of unique letters.  The code word is written at the top of
-a rectangular group of letters.  The second line is the position of the letter above in the alphabet.  Finally, the plaintext is written in rows of the same length as the code word.  
+There are many variations of this.  One example is to pick a code word, such as algorithms, which consists of unique letters.  The code word is written at the top of a rectangular group of letters.  The second line is the position of the letter above in the alphabet.  Finally, the plaintext is written in rows of the same length as the code word.  
 
 For example, if the message is one if by land, two if by sea, it would be written like this:
+
 `a   l   g   o   r   i   t   h   m   s`
+
 `1   12  7   15  18  9   20  8   13  19`
+
 `o   n   e   i   f   b   y   l   a   n`
+
 `d   ,   t   w   o   i   f   b   y   s `  
+
 `e   a   x   x   x   x   x   x   x   x`
 
 If there are blank spaces, just fill them in with an x, or some other character.
@@ -109,16 +113,24 @@ Encoding is different from encryption, in that the information is not easily hum
 Messages can also be encoded before being encrypted, to defeat some of the simplistic decryption techniques used in this code sample.
 
 # Links
-https://en.wikipedia.org/wiki/Cryptography#Classic_cryptography
-https://en.wikipedia.org/wiki/Caesar_cipher
-https://en.wikipedia.org/wiki/Substitution_cipher
-https://en.wikipedia.org/wiki/Transposition_cipher
-https://en.wikipedia.org/wiki/Polyalphabetic_cipher
-https://en.wikipedia.org/wiki/Steganography
+(https://en.wikipedia.org/wiki/Cryptography#Classic_cryptography)
 
-https://en.wikipedia.org/wiki/QR_code
-https://sites.math.washington.edu/~koblitz/crlogia.html
+(https://en.wikipedia.org/wiki/Caesar_cipher)
 
-https://www.qr-code-generator.com - QR image generator.
-https://zxing.org/w/decode.jspx -  QR image decoder.
+(https://en.wikipedia.org/wiki/Substitution_cipher)
+
+(https://en.wikipedia.org/wiki/Transposition_cipher)
+
+(https://en.wikipedia.org/wiki/Polyalphabetic_cipher)
+
+(https://en.wikipedia.org/wiki/Steganography)
+
+
+(https://en.wikipedia.org/wiki/QR_code)
+
+(https://sites.math.washington.edu/~koblitz/crlogia.html)
+
+(https://www.qr-code-generator.com) - [QR image generator.]
+
+(https://zxing.org/w/decode.jspx) -  [QR image decoder.]
 

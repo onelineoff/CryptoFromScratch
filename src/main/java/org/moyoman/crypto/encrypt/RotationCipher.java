@@ -1,10 +1,10 @@
-package org.moyoman.crypto.cipher;
+package org.moyoman.crypto.encrypt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-@Cipher
+@Encryptor
 @Service
 /** Very simplistic encryption by rotating the letters based on a key of 1 - 25.
  * With a key of 3 a -> d, b-> e, ..., x -> a, y -> b, z -> c.

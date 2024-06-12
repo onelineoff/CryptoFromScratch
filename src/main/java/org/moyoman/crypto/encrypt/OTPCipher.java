@@ -1,6 +1,6 @@
-package org.moyoman.crypto.cipher;
+package org.moyoman.crypto.encrypt;
 
-@Cipher
+@Encryptor
 public class OTPCipher {
 	
 		public byte[] process(byte[] input) {
