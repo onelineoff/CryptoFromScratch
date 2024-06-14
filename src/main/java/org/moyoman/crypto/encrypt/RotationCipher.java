@@ -41,6 +41,8 @@ public class RotationCipher {
 
 		// Non alphabetic characters would remain unchanged.
 
-		return new String(charArr);
+		String encryptedStr =  new String(charArr);
+		LOGGER.debug("Encrypted string is {}", encryptedStr);
+		return encryptedStr;
 	}
 }

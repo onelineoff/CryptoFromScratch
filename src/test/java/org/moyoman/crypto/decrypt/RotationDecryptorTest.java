@@ -32,6 +32,7 @@ public class RotationDecryptorTest {
 		assertTrue(plaintext.length() > 100);
 		
 		for (int key=1; key<26; key++) {
+			LOGGER.info("Testing key of {}", key);
 			String encryptedText = rotationCipher.rotate(plaintext, key);
 			String decryptedText = rotationDecryptor.decrypt(encryptedText);
 			assertFalse(plaintext.equals(encryptedText));
