@@ -1,10 +1,9 @@
-package org.moyoman.crypto.cipher;
+package org.moyoman.crypto.encrypt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 import org.junit.jupiter.api.Test;
-import org.moyoman.crypto.encrypt.RotationCipher;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
