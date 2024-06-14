@@ -1,7 +1,6 @@
-package org.moyoman.crypto.cipher;
+package org.moyoman.crypto.encrypt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 import org.junit.jupiter.api.Test;
 
