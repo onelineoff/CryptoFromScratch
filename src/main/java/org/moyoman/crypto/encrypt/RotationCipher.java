@@ -20,7 +20,7 @@ public class RotationCipher {
 	 * @return The encrypted string.
 	 */
 	public String rotate(String input, int key) {
-		if (key <= 0) {
+		if (key <= 0 || key > 26) {
 			String msg = String.format("In rotation cipher, key needs to be in the range 1 - 25, got %d", key);
 			LOGGER.warn(msg);
 			throw new IllegalArgumentException(msg);
