@@ -26,6 +26,7 @@ public class RotationCipher {
 			throw new IllegalArgumentException(msg);
 		}
 		
+		// TODO Rewrite with FP
 		char[] charArr = input.toCharArray();
 		for (int i=0; i<charArr.length; i++) {
 			if (Character.isLetter(charArr[i])) {

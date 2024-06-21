@@ -25,7 +25,7 @@ public class SubstitutionDecryptor {
 		SubstitutionDto substitutionDto = new SubstitutionDto(words);
 		
 		for (SubstitutionProcessor currProcessor : processors) {
-			currProcessor.process(substitutionDto);
+			substitutionDto = currProcessor.process(substitutionDto);
 		}
 		
 		return substitutionDto.getMap();

@@ -6,13 +6,13 @@ public class YUProcessor implements SubstitutionProcessor {
 
 	@Override
 	public SubstitutionDto process(SubstitutionDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Implement this
+		return dto;
 	}
 
 	@Override
 	public String getPrintableName() {
-		return "";
+		return "Processor for the letters y and u.";
 	}
 
 }

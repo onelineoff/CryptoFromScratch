@@ -6,13 +6,13 @@ public class SingleLetterWordProcessor implements SubstitutionProcessor {
 
 	@Override
 	public SubstitutionDto process(SubstitutionDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Implement this
+				return dto;
 	}
 
 	@Override
 	public String getPrintableName() {
-		return "";
+		return "Search for the single letter words a and I.";
 	}
 
 }

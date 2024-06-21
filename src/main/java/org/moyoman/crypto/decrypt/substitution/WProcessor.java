@@ -6,13 +6,13 @@ public class WProcessor implements SubstitutionProcessor {
 
 	@Override
 	public SubstitutionDto process(SubstitutionDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Implement this
+		return dto;
 	}
 
 	@Override
 	public String getPrintableName() {
-		return "";
+		return "Single letter processor for w.";
 	}
 
 }

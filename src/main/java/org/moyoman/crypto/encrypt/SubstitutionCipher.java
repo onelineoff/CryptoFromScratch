@@ -1,5 +1,12 @@
 package org.moyoman.crypto.encrypt;
 
+import java.util.Arrays;
+
+import org.moyoman.crypto.util.RandomUtils;
+import org.moyoman.crypto.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Encryptor
@@ -18,9 +25,34 @@ import org.springframework.stereotype.Service;
  *  cryptanalysis methods must be used.
  */
 public class SubstitutionCipher {
-
-		public String encrypt (String plainText, String key) {
-			return null;
+	private static final Logger LOGGER = LoggerFactory.getLogger(SubstitutionCipher.class);
+	
+	@Autowired
+	private RandomUtils randomUtils;
+	@Autowired
+	private StringUtils stringUtils;
+	
+		public String encrypt (String plaintext, char[] lowerMapping) {
+			char[] upperMapping = stringUtils.toUpperCase(lowerMapping);
+			
+			char[] carr = plaintext.toCharArray();
+			for (int i=0; i<carr.length; i++) {
+				char c = carr[i];
+				
+				if (Character.isLowerCase(c)) {
+					int offset = c - 'a';
+					carr[i] = lowerMapping[offset];
+				}
+				else if (Character.isUpperCase(c)) {
+					int offset = c - 'A';
+					carr[i] = upperMapping[offset];
+				}
+			}
+			
+			
+			String encryptedString = new String(carr);
+			LOGGER.info("Encrypted string is {}", encryptedString);
+			return encryptedString;
 		}
 		
 		public DecipherResult decrypt(String encryptedText) {

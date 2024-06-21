@@ -2,7 +2,7 @@ package org.moyoman.crypto.decrypt.substitution;
 
 import org.moyoman.crypto.dto.SubstitutionDto;
 
-public class FProcessor implements SubstitutionProcessor {
+public class BruteForceProcessor implements SubstitutionProcessor {
 
 	@Override
 	public SubstitutionDto process(SubstitutionDto dto) {
@@ -12,7 +12,7 @@ public class FProcessor implements SubstitutionProcessor {
 
 	@Override
 	public String getPrintableName() {
-		return "Single letter processor for f.";
+		return "Brute force processor";
 	}
 
 }

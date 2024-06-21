@@ -44,7 +44,7 @@ public class TheProcessor implements SubstitutionProcessor {
 		
 		If all the above conditions are true, set the t, h, and e letters. Otherwise, leave them unchanged.
 		 */
-		return null;
+		return dto;
 	}
 
 	@Override

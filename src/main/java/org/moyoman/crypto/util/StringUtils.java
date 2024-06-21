@@ -39,4 +39,13 @@ public class StringUtils {
 	public String[] getWords(String input) {
 		return input.split("\\s");
 	}
+	
+	public char[] toUpperCase(char[] carr) {
+		char[] retArr = new char[carr.length];
+		for (int i=0; i<carr.length; i++) {
+			retArr[i] = Character.toUpperCase(carr[i]);
+		}
+		
+		return retArr;
+	}
 }

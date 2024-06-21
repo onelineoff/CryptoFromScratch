@@ -6,8 +6,8 @@ public class BProcessor implements SubstitutionProcessor {
 
 	@Override
 	public SubstitutionDto process(SubstitutionDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Implement this
+		return dto;
 	}
 
 	@Override
